@@ -3,7 +3,6 @@ import sys
 from src.logger import logging
 from src.exception import CustomException
 from src.utils import save_obj
-from src.components.data_ingestion import DataIngestion
 from dataclasses import dataclass
 import numpy as np
 import pandas as pd
@@ -12,6 +11,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
+
 
 
 ## Main purpose is to data cleaning and feature enginerring
@@ -105,11 +105,13 @@ class DataTransformation:
         except Exception as e:
             raise CustomException(e,sys)
 
-if __name__=='__main__':
-    obj=DataIngestion()
-    test_data,train_data=obj.initiate_data_ingestion()
+## this is for the testing purpose
 
-    data_transform=DataTransformation()
-    data_transform.initiate_data_transformation(test_data,train_data)
+# if __name__=='__main__':
+#     obj=DataIngestion()
+#     test_data,train_data=obj.initiate_data_ingestion()
+
+#     data_transform=DataTransformation()
+#     data_transform.initiate_data_transformation(test_data,train_data)
 
         
