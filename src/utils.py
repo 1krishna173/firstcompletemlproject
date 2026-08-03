@@ -34,9 +34,10 @@ def evaluate(X_train, y_train, X_test, y_test, models):
             train_model_score = r2_score(y_train, y_train_pred)
             test_model_score = r2_score(y_test, y_test_pred)
 
-            report[list(models.keys())[i]] = test_model_score  # ✅ fixed key + moved out of loop-ending return
+            report[list(models.keys())[i]] = test_model_score 
 
-        return report  # ✅ moved outside the for loop
+        return report
 
     except Exception as e:
         raise CustomException(e, sys)
+    
