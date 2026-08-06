@@ -30,7 +30,6 @@ The project covers:
 - Flask
 - CatBoost
 - XGBoost
-- Docker *(optional if used)*
 - Git & GitHub
 
 ---
